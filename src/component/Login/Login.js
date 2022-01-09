@@ -1,12 +1,13 @@
 import React, { useState ,useContext} from 'react';
-import { Firebase } from '../../firebase/configure';
-import { getFirestore, collection, getDocs, addDoc ,doc,deleteDoc,setDoc
+// import { Firebase } from '../../firebase/configure';
+import { getFirestore
 } from 'firebase/firestore/lite';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword ,onAuthStateChanged} from "firebase/auth"
 import { AppContext } from '../../store/Context';
 import Logo from '../../olx-logo.png';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
+
 
  function Login() {
   const navigate = useNavigate()
